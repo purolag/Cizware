@@ -159,13 +159,13 @@ Uis.InputBegan:Connect(function(Key)
                 local Target;Target = GetNearestTarget()
                 if Target ~= nil then 
                     AimlockTarget = Target
-                    Notify("Ciazware", "Aimlock Target: "..tostring(AimlockTarget), "", 3)
+                    
                 end
             end)
         end
         if Key.KeyCode == Enum.KeyCode[AimlockToggleKey] then 
             Aimlock = not Aimlock
-            Notify("Ciazware", "Aimlock: "..tostring(Aimlock), "", 3)
+
         end
     end
 end)
