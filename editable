@@ -19,17 +19,6 @@ getgenv().CiazwareUniversalAimbotLoaded = true
 
 
 
-getgenv().Notify = function(title, text, icon, time)
-    if CanNotify == true then 
-        if not time or not type(time) == "number" then time = 3 end
-        SGui:SetCore("SendNotification",{
-            Title = title;
-            Text = text;
-            Icon = "rbxassetid://5793181157";
-            Duration = time;
-        }) 
-    end
-end
 
 getgenv().WorldToViewportPoint = function(P)
     return Camera:WorldToViewportPoint(P)
@@ -210,5 +199,3 @@ RService.RenderStepped:Connect(function()
         end
     end
 end)
-
-SeparateNotify("Ciazware", "Universal Aimbot loaded in: "..string.format("%.7f", tostring(tick() - CiazwareUniversalAimbotLoadingTime)), "", 3)
