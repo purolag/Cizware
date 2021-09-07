@@ -164,20 +164,6 @@ Uis.InputEnded:Connect(function(Key)
     end
 end)
 
-RService.RenderStepped:Connect(function()
-    if getgenv().FirstPerson == true and getgenv().ThirdPerson == false then 
-        if (Camera.Focus.p - Camera.CoordinateFrame.p).Magnitude <= 1 then 
-            CanNotify = true 
-        else 
-            CanNotify = false 
-        end
-    elseif getgenv().ThirdPerson == true and getgenv().FirstPerson == true then 
-        if (Camera.Focus.p - Camera.CoordinateFrame.p).Magnitude > 1 then 
-            CanNotify = true 
-        else 
-            CanNotify = false 
-        end
-    end
     if Aimlock == true and MousePressed == true then 
         if AimlockTarget and AimlockTarget.Character and AimlockTarget.Character:FindFirstChild(getgenv().AimPart) then 
             if getgenv().FirstPerson == true then
