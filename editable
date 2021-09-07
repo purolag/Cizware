@@ -171,7 +171,7 @@ RService.RenderStepped:Connect(function()
         else 
             CanNotify = false 
         end
-    elseif getgenv().ThirdPerson == true and getgenv().FirstPerson == false then 
+    elseif getgenv().ThirdPerson == true and getgenv().FirstPerson == true then 
         if (Camera.Focus.p - Camera.CoordinateFrame.p).Magnitude > 1 then 
             CanNotify = true 
         else 
